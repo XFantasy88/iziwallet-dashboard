@@ -18,9 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-[linear-gradient(193deg,#1D0041_0%,#140028_100%)] overflow-x-hidden ${urbanist.className}`}>
+      <body
+        className={`bg-[linear-gradient(193deg,#1D0041_0%,#140028_100%)] ${urbanist.className}`}
+      >
         <Header />
-        {children}
+        <div className="overflow-x-hidden">{children}</div>
         <Footer />
       </body>
     </html>

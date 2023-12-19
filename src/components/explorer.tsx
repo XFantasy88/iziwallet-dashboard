@@ -1,11 +1,11 @@
 const Explorer = () => {
   return (
-    <div className="flex justify-center mt-44">
+    <div className="flex justify-center mt-44 max-md:px-4">
       <div className="container flex flex-col items-center">
-        <span className="text-[#E396FF] text-[21px] font-medium tracking-[5px]">
+        <span className="text-[#E396FF] text-lg lg:text-[21px] font-medium tracking-[5px]">
           EXPLORER
         </span>
-        <h2 className="text-[40px] font-semibold tracking-[2px] leading-[118%] text-center mt-8">
+        <h2 className="text-2xl lg:text-[40px] font-semibold tracking-[2px] leading-[118%] text-center mt-8">
           Native IZC To Validators On Izicoin Network
           <br /> In Order To Secure The Network. <br />
           You Can Delegate In Your Wallet.

@@ -6,8 +6,8 @@ const Map = () => {
   return (
     <div className="flex justify-center mt-[300px] mb-[90px]">
       <div className="flex flex-col items-center container relative">
-        <Divider className="absolute text-[#0159FC] top-5 -right-[500px] rotate-180" />
-        <h2 className="text-[35px] font-bold text-center">
+        <Divider className="absolute text-[#0159FC] top-5 -right-[600px] lg:-right-[500px] rotate-180 max-md:hidden" />
+        <h2 className="text-2xl lg:text-[35px] font-bold text-center">
           We are everywhere near you.
           <br />
           Ready to assist you whenever.

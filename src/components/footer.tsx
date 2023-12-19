@@ -1,4 +1,3 @@
-import { Poppins } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
 import Telegram from "@/assets/telegram.svg"
@@ -6,11 +5,6 @@ import Discord from "@/assets/discord.svg"
 import X from "@/assets/x.svg"
 import GoogleStore from "@/assets/google_store.png"
 import AppStore from "@/assets/app_store.png"
-
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-})
 
 const Footer = () => {
   const links = [
@@ -61,12 +55,14 @@ const Footer = () => {
   return (
     <div>
       <div
-        className={`flex justify-center bg-[#000A1C] pt-12 pb-3 ${poppins.className}`}
+        className={`flex justify-center bg-[#000A1C] pt-12 pb-10 md:pb-3 max-md:px-4`}
       >
-        <div className="flex justify-between container">
+        <div className="flex max-md:flex-col max-md:space-y-16 justify-between container">
           <div className="flex flex-col">
-            <h4 className="text-[30px] font-medium underline">Social Media</h4>
-            <div className="flex space-x-10 mt-7">
+            <h4 className="text-[26px] lg:text-[30px] font-medium underline">
+              Social Media
+            </h4>
+            <div className="flex space-x-8 lg:space-x-10 mt-7">
               {links.map((item, i) => (
                 <Link key={i} href={item.link} target="_blank" rel="noreferrer">
                   <Image
@@ -107,7 +103,9 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col">
-            <h4 className="text-[30px] font-medium underline">Our Services</h4>
+            <h4 className="text-[26px] lg:text-[30px] font-medium underline">
+              Our Services
+            </h4>
             {services.map((item, i) => (
               <Link
                 key={i}
@@ -119,7 +117,9 @@ const Footer = () => {
             ))}
           </div>
           <div className="flex flex-col">
-            <h4 className="text-[30px] font-medium underline">Our Products</h4>
+            <h4 className="text-[26px] lg:text-[30px] font-medium underline">
+              Our Products
+            </h4>
             {products.map((item, i) => (
               <Link
                 key={i}
@@ -131,7 +131,9 @@ const Footer = () => {
             ))}
           </div>
           <div className="flex flex-col">
-            <h4 className="text-[30px] font-medium underline">Contact</h4>
+            <h4 className="text-[26px] lg:text-[30px] font-medium underline">
+              Contact
+            </h4>
             <p className="mt-4">
               935 N Beneva Rd,
               <br />
@@ -143,7 +145,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={`bg-black text-center py-4 ${poppins.className}`}>
+      <div className={`bg-black text-center py-4`}>
         @ 2023 Copyright, All Rights Reserved
       </div>
     </div>

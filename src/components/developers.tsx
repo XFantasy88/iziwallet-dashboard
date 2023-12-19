@@ -29,9 +29,9 @@ const DeveloperCard = ({
 }: DeveloperCardProps) => {
   return (
     <div
-      className={`flex flex-col items-center relative bg-[linear-gradient(rgba(255,255,255,1),rgba(164,164,164,0))] rounded-xl shadow-[4px_1000px_4px_#190035_inset] bg-origin-border border-4 border-transparent py-24 px-16 ${className}`}
+      className={`flex flex-col items-center relative bg-[linear-gradient(rgba(255,255,255,1),rgba(164,164,164,0))] rounded-xl shadow-[4px_1000px_4px_#190035_inset] bg-origin-border border-4 border-transparent py-24 px-8 lg:px-16 ${className}`}
     >
-      <div className="absolute top-[7px] left-[10px] right-[2px] bottom-0 bg-[linear-gradient(180deg,#2D0176_-46.2%,rgba(3,25,60,0)_127.56%)] z-0 rounded-[7px]" />
+      <div className="absolute top-[7px] left-[6px] right-[6px] bottom-0 bg-[linear-gradient(180deg,#2D0176_-46.2%,rgba(3,25,60,0)_127.56%)] z-0 rounded-[7px]" />
       <Image
         src={image.src}
         width={image.width}
@@ -39,8 +39,8 @@ const DeveloperCard = ({
         alt="logo"
         className={`absolute top-0 left-0 right-0 mx-auto -translate-y-1/2 ${imageClassName}`}
       />
-      <h4 className="text-[27px] font-semibold z-[1]">{title}</h4>
-      <p className="text-[13px] text-center mt-5 z-[1]">{desc}</p>
+      <h4 className="text-[27px] font-semibold z-[1] text-center">{title}</h4>
+      <p className="text-center mt-5 z-[1]">{desc}</p>
       <Link
         href={link}
         target="_blank"
@@ -55,18 +55,18 @@ const DeveloperCard = ({
 
 const Developers = () => {
   return (
-    <div className="flex justify-center">
-      <div className="flex flex-col items-center container mt-48 mb-36 relative">
-        <Divider className="absolute top-5 -left-[500px] text-[#6400FF]" />
-        <h2 className={`text-[42px] font-bold ${tourney.className}`}>
+    <div className="flex justify-center max-md:px-4">
+      <div className="flex flex-col items-center container mt-28 md:mt-48 mb-10 md:mb-36 relative">
+        <Divider className="absolute top-5 -left-[640px] md:-left-[500px] text-[#6400FF]" />
+        <h2 className={`text-[38px] lg:text-[42px] font-bold ${tourney.className}`}>
           Developers
         </h2>
-        <h3 className="text-[40px] font-bold">Build On The IZC Smart Chain</h3>
-        <p className="text-[27px] font-semibold mt-4">
+        <h3 className="text-4xl lg:text-[40px] font-bold mt-4 text-center">Build On The IZC Smart Chain</h3>
+        <p className="text-lg lg:text-[27px] font-semibold mt-6 text-center">
           Developed By Izichain, To Become A General Tool For The Developer
           Community
         </p>
-        <div className="flex w-full justify-between mt-[120px]">
+        <div className="flex w-full max-md:flex-col max-md:space-y-24 justify-between mt-[120px]">
           <DeveloperCard
             title="Open Source"
             desc="Codebase and ecosystem tools are totally open source."
@@ -74,7 +74,7 @@ const Developers = () => {
             resource="Github"
             image={Ethcoin}
             imageClassName="drop-shadow-[0_0_20px_#F3A43D]"
-            className="scale-90 w-[calc(33.33%-50px)]"
+            className="md:scale-90 md:w-[calc(33.33%-10px)] lg:w-[calc(33.33%-50px)]"
           />
           <DeveloperCard
             title="Services"
@@ -83,7 +83,7 @@ const Developers = () => {
             resource="Mainnet"
             image={Shield}
             imageClassName="drop-shadow-[0_0_20px_#10DA71]"
-            className="w-[calc(33.33%-50px)]"
+            className="md:w-[calc(33.33%-10px)] lg:w-[calc(33.33%-50px)]"
           />
           <DeveloperCard
             title="Developers"
@@ -92,7 +92,7 @@ const Developers = () => {
             resource="Developer"
             image={Medal}
             imageClassName="drop-shadow-[0_0_20px_#FC0427]"
-            className="scale-90 w-[calc(33.33%-50px)]"
+            className="md:scale-90 md:w-[calc(33.33%-10px)] lg:w-[calc(33.33%-50px)]"
           />
         </div>
       </div>
